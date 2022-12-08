@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../fontawesome-free-6.1.2-web/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+        </style>
+</head>
+
+<body>
+    <div class="container mx-auto my-5 text-center">
+        <div class="group m-auto w-75 p-5">
+            <h1 class="text-white mb-4">Smart Login System</h1>
+            <div>
+                <input onchange="nameInputValidation()" class="form-control mb-4" type="text" id="signName" required placeholder="Enter Your Name">
+                <p id="usernameAlert" class="d-none text-center bg-danger text-white rounded py-1">include at least 3 letters starting with capital, second name is optional</p>
+            </div>
+            <div>
+                <input onchange="emailInputValidation() , isExist()" class="form-control mb-4" type="email" id="signEmail" required placeholder="Enter Your  Email">
+                <p id="userEmailAlert" class="d-none text-center bg-danger text-white rounded py-1">name@example.com</p>
+                <p class="d-none text-center bg-danger text-white rounded py-1 m-0" id="accountExistMsg">this account is exist ! Try another one.</p>
+            </div>
+            <div class="position-relative">
+                <input onchange="passwordInputValidation() " class="form-control mb-4" type="password" id="signPassword" required
+                placeholder="Enter Your Password">
+                <p id="userPasswordAlert" class="d-none text-center bg-danger text-white rounded py-1">you must strength your password, from 8 to 15 characters</p>
+                <i id="togglePassword" class="hide fa-solid fa-eye"></i>
+            </div>
+            <div class="text-center" id="message"></div>
+            
+            <p class="d-none text-center bg-danger text-white rounded py-1" id="tryAgainMsg">signUp failed ! Try again</p>
+            <button onclick="inputAdd()" class="btn btn-outline-info text-white w-100">Sign Up</button>
+            <p class="text-white mt-3">Don’t have an account?
+                <a class="text-info text-decoration-none" href="../Login/index.html">SignIn</a>
+            </p>
+        </div>
+
+
+    </div>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

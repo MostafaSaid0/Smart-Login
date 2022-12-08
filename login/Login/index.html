@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../fontawesome-free-6.1.2-web/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+        </style>
+</head>
+
+<body>
+
+    <div class="container mx-auto my-5 text-center">
+        <div class="group m-auto w-75 p-5">
+            <h1 class="text-white mb-4">Smart Login System</h1>
+            <input class="form-control mb-4" type="email" id="signEmail" required placeholder="Enter Your  Email">
+            <span class="position-relative">
+            <input class="form-control mb-4" type="password" id="signPassword" required
+                placeholder="Enter Your Password">
+                <i id="togglePassword" class="hide fa-solid fa-eye"></i>
+                </span>
+            <div class="text-center" id="message"></div>
+            <p class="text-white bg-danger p-1 rounded d-none " id="incorrectMsg">Your Email or Password is incorrect</p>
+            <button onclick="loginAdd()" id="login" class="btn btn-outline-info text-white w-100">Login</button>
+            <p class="text-white mt-3">Don’t have an account?
+                <a class="text-info text-decoration-none" href="../Sign Up/index.html">SignIn</a>
+            </p>
+        </div>
+
+
+    </div>
+
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
